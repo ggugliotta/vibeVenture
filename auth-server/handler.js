@@ -74,17 +74,14 @@ module.exports.getAccessToken = async (event) => {
     });
 };
 
-
-
-
-
-
 module.exports.getCalendarEvents = async (event) => {
-  // Decode authorization code extracted from the URL query
-  const access_token = decodeURIComponent(`${event.pathParameters.code}`);
+  // Get access token 
+  const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
+  // Set credentials
   oAuth2Client.setCredentials({ access_token });
 
   return new Promise((resolve, reject) => {
+    // Get Calendar Events
     calendar.events.list(
       {
         calendarId: CALENDAR_ID,
@@ -95,19 +92,12 @@ module.exports.getCalendarEvents = async (event) => {
       },
       (error, response) => {
         if (error) {
-          reject(error);
-        } else {
-          resolve(response);
+          return reject(error);
         }
-      }
-    );
-    oAuth2Client.getToken(access_token, (error, response) => {
-      if (error) {
-        return reject(error);
-      }
-      return resolve(response);
-    });
-  })
+          return resolve(response);
+        }
+      );
+    })
     .then((results) => {
       // Respond with OAuth token 
       return {
@@ -126,4 +116,4 @@ module.exports.getCalendarEvents = async (event) => {
         body: JSON.stringify(error),
       };
     });
-};
+}
