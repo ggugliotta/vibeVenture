@@ -47,6 +47,8 @@ This project was built to locate events happening around the USA. There is a fil
 
 ![VibeVenture Serverless Architectural Diagram Image](diagram.png)
 
+VibeVenture was written in React and Javascript for the front-end component and is hosted on GitHub Pages. The backend was written in Node.js and Express with Lambda Functions and is hosted serverless on Amazon Web Services. 
+
 User Stories: 
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
 2. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event. 
