@@ -45,7 +45,9 @@ event finder
 
 This project was built to locate events happening around the USA. There is a filter option to find vibes near you. This app is a progressive web app with the ability to work offline and a serverless backend developed using a TDD technique. Users of this app will be able to access it whenever they want to view upcoming events for a specific city.
 
-![VibeVenture Serverless Architectural Diagram Image](public/vibeventure.png)
+![VibeVenture Serverless Architectural Diagram Image](diagram.png)
+
+VibeVenture was written in React and Javascript for the front-end component and is hosted on GitHub Pages. The backend was written in Node.js and Express with Lambda Functions and is hosted serverless on Amazon Web Services. 
 
 User Stories: 
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
