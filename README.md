@@ -50,21 +50,22 @@ This project was built to locate events happening around the USA. There is a fil
 VibeVenture was written in React and Javascript for the front-end component and is hosted on GitHub Pages. The backend was written using a combination of React, Javascript, Node.js, and Express (with Lambda Functions) and is hosted on Amazon Web Services. 
 <details>
   
-<summary> **User Stories:** </summary>
-<p>1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
+ **User Stories:** 
+1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
 2. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event. 
 3. As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once. 
 4. As a user, I would like to be able to use the app when offline so that I can see the events I viewed the last time I was online.
 5. As a user, I would like to be able to add the app shortcut to my home screen so that I can open the app faster. 
-6. As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.</p>
-</details>
+6. As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
+
 - - - - 
 
 **Scenarios:**
 
-Feature 1: Filter Events By City
+<details>
+  <summary>Feature 1: Filter Events By City</summary>
 
-Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
+<p>Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
 * Given user hasn’t searched for any city;
 * When the user opens the app;
 * Then the user should see a list of upcoming events.
@@ -77,7 +78,8 @@ Scenario 2: User should see a list of suggestions when they search for a city.
 Scenario 3: User can select a city from the suggested list.
 * Given user was typing “Chicago” in the city textbox AND the list of suggested cities is showing;
 * When the user selects a city (e.g. “Chicago, Illinois”) from the list;
-* Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.
+* Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
+</details>
 
 Feature 2: Show/Hide Event Details
 
