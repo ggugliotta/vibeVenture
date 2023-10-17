@@ -80,7 +80,7 @@ VibeVenture was written in React and Javascript for the front-end component and 
  Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
 </details>
 
-</details>
+<details>
 <summary>Feature 2: Show/Hide Event Details</summary>
 
 <p>Scenario 1: An event element is collapsed by default
