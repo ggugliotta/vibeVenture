@@ -80,60 +80,72 @@ VibeVenture was written in React and Javascript for the front-end component and 
 * Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
 </details>
 
-Feature 2: Show/Hide Event Details
+</details>
+<summary>Feature 2: Show/Hide Event Details</summary>
 
-Scenario 1: An event element is collapsed by default
+<p>Scenario 1: An event element is collapsed by default
 * Given that the user is viewing events for a filtered city;
 * When a user scrolls down the results page;
-* Then the events element is collapsed by default to show limited information.
+* Then the events element is collapsed by default to show limited information.</p>
   
-Scenario 2: User can expand an event to see details.
+<p>Scenario 2: User can expand an event to see details.
 * Given that the event element is collapsed by default;
 * When a user clicks on the element;
-* Then the user should be able to open the event element to show more details.
+* Then the user should be able to open the event element to show more details.</p>
   
-Scenario 3:  User can collapse an event to hide details.
+<p>Scenario 3:  User can collapse an event to hide details.
 * Given that the event element is open;
 * When a user clicks on the event element;
-* Then the user should be able to collapse the event element to show less details.
+* Then the user should be able to collapse the event element to show less details.</p>
+</details>
 
-Feature 3: Specify Number of Events
+<details>
+<summary>Feature 3: Specify Number of Events</summary>
 
-Scenario 1: When a user hasn't specified a number, 32 events are shown by default
+<p>Scenario 1: When a user hasn't specified a number, 32 events are shown by default
 * Given that the main page is open;
 * When a user opens the app;
-* Then 32 events will be shown by default.
+* Then 32 events will be shown by default.</p>
   
-Scenario 2: User can change the number of events displayed. 
+<p>Scenario 2: User can change the number of events displayed. 
 * Given that a specific city event results are showing;
 * When a user clicks submit on the search bar to filter for a specific city;
-* Then an optional setting will show up below to specify the number of events to display.
+* Then an optional setting will show up below to specify the number of events to display.</p>
+</details>
 
-Feature 4: Use the App When Offline
+<details>
+<summary>Feature 4: Use the App When Offline</summary>
 
-Scenario 1: Show cached data when there's no internet connection 
+<p>Scenario 1: Show cached data when there's no internet connection 
 * Given that there is no internet connection;
 * When a user opens the app;
-* Display cached data.
+* Display cached data.</p>
 
-Scenario 2: Show error when user changes search settings (city, number of events)
+<p>Scenario 2: Show error when user changes search settings (city, number of events)
 * Given that there is no internet connection;
 * When a user changes search settings in the app (city, number of events);
-* Display an error explaining that there is no internet connection. 
+* Display an error explaining that there is no internet connection.</p>
+</details>
 
-Feature 5: Add an App Shortcut to the Home Screen
+<details>
+<summary>Feature 5: Add an App Shortcut to the Home Screen</summary>
 
-Scenario 1: User can install vibeVenture as a shortcut on their device home screen. 
+<p>Scenario 1: User can install vibeVenture as a shortcut on their device home screen. 
 * Given that the app is downloaded on the user’s device;
 * When the user clicks on the vibeVenture app;
-* Then their OS system will allow them to add the app to their home screen.
+* Then their OS system will allow them to add the app to their home screen.</p>
+</details>
 
-Feature 6: Display Charts Visualizing Event Details
+<details>
+<summary>Feature 6: Display Charts Visualizing Event Details</summary>
 
-Scenario 1: Show a chart with the number of upcoming events in each city.
+<p>Scenario 1: Show a chart with the number of upcoming events in each city.
 * Given that the main page is open;
 * When the user opens the app;
-* Then the user should see a chart with a number of upcoming events in each city.
+* Then the user should see a chart with a number of upcoming events in each city.</p>
+</details>
+
+
 
 
 ## Built With
