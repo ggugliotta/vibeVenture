@@ -67,14 +67,14 @@ VibeVenture was written in React and Javascript for the front-end component and 
 <p>Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
 * Given user hasn’t searched for any city;
 * When the user opens the app;
-* Then the user should see a list of upcoming events.
+* Then the user should see a list of upcoming events.</p>
 
-Scenario 2: User should see a list of suggestions when they search for a city.
+<p>Scenario 2: User should see a list of suggestions when they search for a city.
 * Given that the main page is open;
 * When user starts typing in the city textbox;
-* Then the user should receive a list of cities (suggestions) that match what they've typed.
+* Then the user should receive a list of cities (suggestions) that match what they've typed.</p>
 
-Scenario 3: User can select a city from the suggested list.
+<p>Scenario 3: User can select a city from the suggested list.
 * Given user was typing “Chicago” in the city textbox AND the list of suggested cities is showing;
 * When the user selects a city (e.g. “Chicago, Illinois”) from the list;
 * Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
