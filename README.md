@@ -65,84 +65,84 @@ VibeVenture was written in React and Javascript for the front-end component and 
   <summary>Feature 1: Filter Events By City</summary>
 
 <p>Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
-* Given user hasn’t searched for any city;
-* When the user opens the app;
-* Then the user should see a list of upcoming events.</p>
+ Given user hasn’t searched for any city;
+ When the user opens the app;
+ Then the user should see a list of upcoming events.</p>
 
 <p>Scenario 2: User should see a list of suggestions when they search for a city.
-* Given that the main page is open;
-* When user starts typing in the city textbox;
-* Then the user should receive a list of cities (suggestions) that match what they've typed.</p>
+ Given that the main page is open;
+ When user starts typing in the city textbox;
+ Then the user should receive a list of cities (suggestions) that match what they've typed.</p>
 
 <p>Scenario 3: User can select a city from the suggested list.
-* Given user was typing “Chicago” in the city textbox AND the list of suggested cities is showing;
-* When the user selects a city (e.g. “Chicago, Illinois”) from the list;
-* Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
+ Given user was typing “Chicago” in the city textbox AND the list of suggested cities is showing;
+ When the user selects a city (e.g. “Chicago, Illinois”) from the list;
+ Then their city should be changed to that city(i.e., “Chicago, Il”) AND the user should receive a list of upcoming events in that city.</p>
 </details>
 
 </details>
 <summary>Feature 2: Show/Hide Event Details</summary>
 
 <p>Scenario 1: An event element is collapsed by default
-* Given that the user is viewing events for a filtered city;
-* When a user scrolls down the results page;
-* Then the events element is collapsed by default to show limited information.</p>
+ Given that the user is viewing events for a filtered city;
+ When a user scrolls down the results page;
+ Then the events element is collapsed by default to show limited information.</p>
   
 <p>Scenario 2: User can expand an event to see details.
-* Given that the event element is collapsed by default;
-* When a user clicks on the element;
-* Then the user should be able to open the event element to show more details.</p>
+ Given that the event element is collapsed by default;
+ When a user clicks on the element;
+ Then the user should be able to open the event element to show more details.</p>
   
 <p>Scenario 3:  User can collapse an event to hide details.
-* Given that the event element is open;
-* When a user clicks on the event element;
-* Then the user should be able to collapse the event element to show less details.</p>
+ Given that the event element is open;
+ When a user clicks on the event element;
+ Then the user should be able to collapse the event element to show less details.</p>
 </details>
 
 <details>
 <summary>Feature 3: Specify Number of Events</summary>
 
 <p>Scenario 1: When a user hasn't specified a number, 32 events are shown by default
-* Given that the main page is open;
-* When a user opens the app;
-* Then 32 events will be shown by default.</p>
+ Given that the main page is open;
+ When a user opens the app;
+ Then 32 events will be shown by default.</p>
   
 <p>Scenario 2: User can change the number of events displayed. 
-* Given that a specific city event results are showing;
-* When a user clicks submit on the search bar to filter for a specific city;
-* Then an optional setting will show up below to specify the number of events to display.</p>
+ Given that a specific city event results are showing;
+ When a user clicks submit on the search bar to filter for a specific city;
+ Then an optional setting will show up below to specify the number of events to display.</p>
 </details>
 
 <details>
 <summary>Feature 4: Use the App When Offline</summary>
 
 <p>Scenario 1: Show cached data when there's no internet connection 
-* Given that there is no internet connection;
-* When a user opens the app;
-* Display cached data.</p>
+ Given that there is no internet connection;
+ When a user opens the app;
+ Display cached data.</p>
 
 <p>Scenario 2: Show error when user changes search settings (city, number of events)
-* Given that there is no internet connection;
-* When a user changes search settings in the app (city, number of events);
-* Display an error explaining that there is no internet connection.</p>
+ Given that there is no internet connection;
+ When a user changes search settings in the app (city, number of events);
+ Display an error explaining that there is no internet connection.</p>
 </details>
 
 <details>
 <summary>Feature 5: Add an App Shortcut to the Home Screen</summary>
 
 <p>Scenario 1: User can install vibeVenture as a shortcut on their device home screen. 
-* Given that the app is downloaded on the user’s device;
-* When the user clicks on the vibeVenture app;
-* Then their OS system will allow them to add the app to their home screen.</p>
+ Given that the app is downloaded on the user’s device;
+ When the user clicks on the vibeVenture app;
+ Then their OS system will allow them to add the app to their home screen.</p>
 </details>
 
 <details>
 <summary>Feature 6: Display Charts Visualizing Event Details</summary>
 
 <p>Scenario 1: Show a chart with the number of upcoming events in each city.
-* Given that the main page is open;
-* When the user opens the app;
-* Then the user should see a chart with a number of upcoming events in each city.</p>
+ Given that the main page is open; 
+  When the user opens the app;
+  Then the user should see a chart with a number of upcoming events in each city.</p>
 </details>
 
 
