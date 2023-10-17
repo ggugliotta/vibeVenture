@@ -83,7 +83,7 @@ VibeVenture was written in React and Javascript for the front-end component and 
 <details>
 <summary>Feature 2: Show/Hide Event Details</summary>
 
-<p>Scenario 1: An event element is collapsed by default
+<p>Scenario 1: An event element is collapsed by default.
  Given that the user is viewing events for a filtered city;
  When a user scrolls down the results page;
  Then the events element is collapsed by default to show limited information.</p>
@@ -102,7 +102,7 @@ VibeVenture was written in React and Javascript for the front-end component and 
 <details>
 <summary>Feature 3: Specify Number of Events</summary>
 
-<p>Scenario 1: When a user hasn't specified a number, 32 events are shown by default
+<p>Scenario 1: When a user hasn't specified a number, 32 events are shown by default.
  Given that the main page is open;
  When a user opens the app;
  Then 32 events will be shown by default.</p>
