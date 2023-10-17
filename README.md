@@ -48,16 +48,19 @@ This project was built to locate events happening around the USA. There is a fil
 ![VibeVenture Serverless Architectural Diagram Image](diagram.png)
 
 VibeVenture was written in React and Javascript for the front-end component and is hosted on GitHub Pages. The backend was written using a combination of React, Javascript, Node.js, and Express (with Lambda Functions) and is hosted on Amazon Web Services. 
-
-User Stories: 
-1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
+<details>
+  
+<summary> **User Stories:** </summary>
+<p>1. As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. 
 2. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event. 
 3. As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once. 
 4. As a user, I would like to be able to use the app when offline so that I can see the events I viewed the last time I was online.
 5. As a user, I would like to be able to add the app shortcut to my home screen so that I can open the app faster. 
-6. As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city. 
+6. As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.</p>
+</details>
+- - - - 
 
-Scenarios: 
+**Scenarios:**
 
 Feature 1: Filter Events By City
 
@@ -203,3 +206,4 @@ Contributions are what make the open source community such an amazing place to b
 * [ShaanCoding](https://github.com/ShaanCoding/)
 * [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
 * [ImgShields](https://shields.io/)
+
