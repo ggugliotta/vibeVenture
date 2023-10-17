@@ -80,7 +80,7 @@ Feature 2: Show/Hide Event Details
 
 Scenario 1: An event element is collapsed by default
 * Given that the user is viewing events for a filtered city;
- When a user scrolls down the results page;
+* When a user scrolls down the results page;
 * Then the events element is collapsed by default to show limited information.
   
 Scenario 2: User can expand an event to see details.
