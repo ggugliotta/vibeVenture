@@ -15,6 +15,13 @@ export const extractLocations = (events) => {
     return locations;
 };
 
+export const extractSummary = (events) => {
+    const extractedSummaries = events.map((event) => event.summary);
+    const summaries = [...new Set(extractedSummaries)];
+    return summaries;
+};
+
+
 /**
  * 
  * This function will fetch the list of all events
