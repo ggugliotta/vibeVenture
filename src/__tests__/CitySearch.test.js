@@ -22,18 +22,26 @@ describe('<CitySearch /> component', () => {
    });
 
    test('renders a list of suggestions when city textbox gains focus', async () => {
+    //User Interaction Setup
     const user = userEvent.setup();
+    //Textbox Exists
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
+    // Simulate user clicking on textbox
     await user.click(cityTextBox);
+    //SuggestionList exists
     const suggestionList = CitySearchComponent.queryByRole('list');
     expect(suggestionList).toBeInTheDocument();
     expect(suggestionList).toHaveClass('suggestions');
    });
 
    test('updates list of suggestions correctly when user types in city textbox', async () => {
+      //User Interaction Setup
       const user = userEvent.setup();
+      //Load getEvents from api.js (function that returns mockData)
       const allEvents = await getEvents();
+      // Get extractLocations from api.js (function creates new arrary from mockData with only locations) for all events
       const allLocations = extractLocations(allEvents);
+      // Rerender CitySearch with all locations available to search
       CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
 
       //user types "Berlin" in city textbox

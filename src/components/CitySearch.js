@@ -1,12 +1,15 @@
 // src/components/CitySearch.js
 
 import { useState } from "react";
-
+  //create CitySearch component using allLocations as parameter
 const CitySearch = ({ allLocations }) => {
+  
+  //create showSuggestions item and set state as empty array when query is empty 
  const [showSuggestions, setShowSuggestions] = useState(false);
  const [query, setQuery] = useState("");
  const [suggestions, setSuggestions] = useState([]);
-
+ 
+ // change state when event is added and filter locations based value (textContent, user input) 
 const handleInputChanged = (event) => {
   const value = event.target.value;
   const filteredLocations = allLocations ? allLocations.filter((location) => {
@@ -17,6 +20,7 @@ const handleInputChanged = (event) => {
   setSuggestions(filteredLocations);
    };
 
+   //Hide the list when an event is selected by the user
 const handleItemClicked = (event) => {
   const value = event.target.textContent;
   setQuery(value);
