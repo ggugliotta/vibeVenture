@@ -1,5 +1,6 @@
 // src/components/Event.js
 import { useState } from "react";
+import "../api.js";
 import { getEvents, extractSummaries, extractdateTimes, extracttimeZones, extractlocations, extractdescriptions, extracthtmlLinks  } from "../api.js";
 
 const Event = ( { getEvents } ) => {

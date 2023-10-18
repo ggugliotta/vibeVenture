@@ -52,3 +52,5 @@ export const extracthtmlLinks = (events) => {
 export const getEvents = async () => {
     return mockData;
 };
+
+export default getEvents;
