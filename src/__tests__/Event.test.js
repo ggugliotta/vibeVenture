@@ -3,27 +3,28 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Event from '../components/Event';
-import { getEvents } from '../api';
+
+
 
 describe('<Event /> component', () => {
     let EventComponent;
     beforeEach(() => {
-        EventComponent = render(<Event />);
+        EventComponent = render(<Event event={Event} />);
     })
 
     test('renders event title (summary key)', () => {
       const eventSummary = EventComponent.queryByText('summary');
-      expect(EventComponent.queryByText(allEvents[0].summary)).toBeInTheDocument();
+      expect(EventComponent.queryByText(eventdata[0].summary)).toBeInTheDocument();
     });
 
     test('renders event start time (created key)', () => {
-        const eventCreated = EventComponent.queryByText('created');
-        expect(EventComponent.queryByText(allEvents[0].created)).toBeInTheDocument();
+        const eventdateTime = EventComponent.queryByText('dateTime');
+        expect(EventComponent.queryByText(eventdata[0].dateTime)).toBeInTheDocument();
     });
 
     test('renders event location', () => {
         const eventLocation = EventComponent.queryByText('location');
-        expect(EventComponent.queryByText(allEvents[0].location)).toBeInTheDocument();
+        expect(EventComponent.queryByText(eventdata[0].location)).toBeInTheDocument();
     });
 
     test('renders event details button with the title (show details)', () => {
@@ -43,7 +44,7 @@ describe('<Event /> component', () => {
         await user.click(showDetailsButton);
         const detailsSection = EventComponent.container.querySelector("detailsOpen"); 
         expect(detailsSection).toBeVisible();
-        EventComponent.rerender(<Event /> );
+        EventComponent.rerender(<Event event={ Event } /> );
     });
 
     test('User can click on "hide details" button to collapse an event to hide details.', async () => {
@@ -52,6 +53,6 @@ describe('<Event /> component', () => {
         await user.click(hideDetails);
         const detailsSection = EventComponent.container.querySelector("details closed");
         expect(detailsSection).not.toBeVisible();
-        EventComponent.rerender(<Event />);
+        EventComponent.rerender(<Event event = { Event } />);
     });
 })

@@ -15,35 +15,6 @@ export const extractLocations = (events) => {
     return locations;
 };
 
-export const extractSummaries = (events) => {
-    const extractedSummaries = events.map((event) => event.summary);
-    const summaries = [...new Set(extractedSummaries)];
-    return summaries;
-};
-
-export const extractdateTimes = (events) => {
-    const extracteddateTimes = events.map((event) => event.dateTime);
-    const dateTimes = [...new Set(extracteddateTimes)];
-    return dateTime;
-};
-
-export const extracttimeZones = (events) => {
-    const extractetimeZones = events.map((event) => event.timeZone);
-    const timeZone = [...new Set(extractedtimeZone)];
-    return timeZone;
-};
-
-export const extractdescriptions = (events) => {
-    const extracteddescriptions = events.map((event) => event.description);
-    const descriptions = [...new Set(description)];
-    return description;
-};
-
-export const extracthtmlLinks = (events) => {
-    const extractedhtmlLinks = events.map((event) => event.htmlLinks);
-    const htmlLinks = [...new Set(htmlLinks)];
-    return htmlLinks;
-};
 
 /**
  * 
