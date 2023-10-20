@@ -6,6 +6,7 @@ import { getEvents } from '../api';
 
 describe('<EventList /> component', () => {
     let EventListComponent;
+
     beforeEach(() => {
         EventListComponent = render(<EventList />);
     })
