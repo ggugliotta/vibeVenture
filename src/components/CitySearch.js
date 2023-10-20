@@ -1,8 +1,13 @@
 // src/components/CitySearch.js
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
   //create CitySearch component using allLocations as parameter
-const CitySearch = ({ allLocations }) => {
+const CitySearch = ({ allLocations, setCurrentCity }) => {
+
+  useEffect(() => {
+    setSuggestions(allLocations);
+  }, [`${allLocations}`]);
   
   //create showSuggestions item and set state as empty array when query is empty 
  const [showSuggestions, setShowSuggestions] = useState(false);
@@ -15,16 +20,16 @@ const handleInputChanged = (event) => {
   const filteredLocations = allLocations ? allLocations.filter((location) => {
     return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
   }) : [];
-
   setQuery(value);
   setSuggestions(filteredLocations);
-   };
+};
 
    //Hide the list when an event is selected by the user
 const handleItemClicked = (event) => {
   const value = event.target.textContent;
   setQuery(value);
   setShowSuggestions(false); // to hide the list
+  setCurrentCity(value);
   };
 
 return (
