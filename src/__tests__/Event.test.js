@@ -1,20 +1,16 @@
 // src_tests_Event.test.js
 
 import { render } from '@testing-library/react';
-import ".../mock-data";
 import userEvent from '@testing-library/user-event';
 import Event from '../components/Event';
-import { getEvents } from ".../api";
+import { getEvents } from '../api'
 
 describe('<Event /> component', () => {
     let EventComponent;
     let allEvents;
 
-    beforeAll(async () => {
-        EventComponent = render(<Event event={allEvents[0]} />);
-    });
-
     beforeEach(async () => {
+        allEvents = await getEvents();
         EventComponent = render(<Event event={allEvents[0]} />);
     });
 
@@ -23,11 +19,10 @@ describe('<Event /> component', () => {
     });
 
     test('renders event start time (created key)', () => {
-        expect(EventComponent.queryByText(allEvents[0].dateTime)).toBeInTheDocument();
+        expect(EventComponent.queryByText(allEvents[0].created)).toBeInTheDocument();
     });
 
     test('renders event location', () => {
-        const eventLocation = EventComponent.queryByText('location');
         expect(EventComponent.queryByText(allEvents[0].location)).toBeInTheDocument();
     });
 
@@ -36,25 +31,33 @@ describe('<Event /> component', () => {
     });
 
     test('event element is hidden by default to show limited information.', () => {
-        const eventDetails = eventComponent.queryByText('details')
-        expect(eventDetails).not.toBeInTheDocument();
+        const eventDOM = EventComponent.container.firstChild;
+        const details = eventDOM.querySelector('.details');
+        expect(details).not.toBeInTheDocument();
     });
 
     test('user can click on "show details" button to expand an event to show details.', async () => {
         const user = userEvent.setup();
         const showDetailsButton = EventComponent.queryByText("show details");
         await user.click(showDetailsButton);
-        const detailsSection = EventComponent.container.querySelector("detailsOpen"); 
-        expect(detailsSection).toBeVisible();
-        EventComponent.rerender(<Event event={ allEvents[0] } /> );
+
+        const eventDOM = EventComponent.container.firstChild;
+        const details = eventDOM.querySelector('.details');
+        expect(details).toBeInTheDocument();
     });
 
     test('User can click on "hide details" button to collapse an event to hide details.', async () => {
         const user = userEvent.setup();
+        const showDetailsButton = EventComponent.queryByText("show details");
+        await user.click(showDetailsButton);
+
+        const eventDOM = EventComponent.container.firstChild;
+        const details = eventDOM.querySelector('.details');
+        expect(details).toBeInTheDocument();
+
         const hideDetailsButton = EventComponent.queryByText("hide details");
-        await user.click(hideDetails);
-        const detailsSection = EventComponent.container.querySelector("details closed");
-        expect(detailsSection).not.toBeVisible();
-        EventComponent.rerender(<Event event = { allEvents[0] } />);
+        await user.click(hideDetailsButton);
+
+        expect(details).not.toBeInTheDocument();
     });
 })
