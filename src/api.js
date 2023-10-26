@@ -30,7 +30,7 @@ export const getEvents = async () => {
 
   if (token) {
     removeQuery();
-    const url = "YOUR_GET_EVENTS_API_ENDPOINT" + "/" + token;
+    const url = "https://fg3bgc5r7h.execute-api.us-east-2.amazonaws.com/dev/api/get-events" + "/" + token;
     const response = await fetch(url);
     const result = await response.json();
     if (result) {
@@ -50,7 +50,7 @@ export const getAccessToken = async () => {
     const code = await searchParams.get("code");
     if (!code) {
       const response = await fetch(
-        "YOUR_SERVERLESS_GET_AUTH_URL_ENDPOINT"
+        "https://fg3bgc5r7h.execute-api.us-east-2.amazonaws.com/dev/api/get-auth-url"
       );
       const result = await response.json();
       const { authUrl } = result;
@@ -84,26 +84,11 @@ const removeQuery = () => {
   }
 };
 
-// getToken without try...catch
-
-// const getToken = async (code) => {
-//   const encodeCode = encodeURIComponent(code);
-//   const response = await fetch(
-//     'YOUR_GET_ACCESS_TOKEN_ENDPOINT' + '/' + encodeCode
-//   );
-//   const { access_token } = await response.json();
-//   access_token && localStorage.setItem("access_token", access_token);
-
-//   return access_token;
-// };
-
-// getToken with try...catch
-
 const getToken = async (code) => {
   try {
     const encodeCode = encodeURIComponent(code);
 
-    const response = await fetch('YOUR_GET_ACCESS_TOKEN_ENDPOINT' + '/' + encodeCode);
+    const response = await fetch('https://fg3bgc5r7h.execute-api.us-east-2.amazonaws.com/dev/api/token' + '/' + encodeCode);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
