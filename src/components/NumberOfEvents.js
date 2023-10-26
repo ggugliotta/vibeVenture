@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-const NumberOfEvents = () => {
+const NumberOfEvents = ({ setCurrentNOE }) => {
     const handleInputChanged = (event)  => {
         const value = event.target.value;
+        setCurrentNOE(value);
     };
 
     return (
@@ -12,6 +13,7 @@ const NumberOfEvents = () => {
                 className="number-of-events"
                 defaultValue="32"
                 onChange={handleInputChanged}
+                data-testid = "numberofeventsInput"
             />
         </div>
     );
