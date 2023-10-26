@@ -25,7 +25,7 @@ const fetchData = async () => {
 
 useEffect(() => {
   fetchData();
-  }, [ currentCity ]);
+  }, [ currentCity, currentNOE ]);
 
 
 return (

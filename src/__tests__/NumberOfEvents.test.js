@@ -7,7 +7,7 @@ import NumberOfEvents from "../components/NumberOfEvents";
 describe("<NumberOfEvents /> component", () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
   });
 
   test("renders text input", () => {
@@ -32,14 +32,13 @@ describe("<NumberOfEvents /> component", () => {
 });
 
 describe('<NumberOfEvents /> integration', () => {
-  test("number of events rendered matches number of events inputted by the user", async () => {
-    const user = userEvent.setup();
+  test("selected number of events by the user are rendered when the app opens", async () => {
     const AppComponent = render(<App />);
     const AppDOM = AppComponent.container.firstChild;
 
     const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
     const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');
-    await user.type(NumberOfEventsInput, "{backspace}{backspace}10");
+    await userEvent.type(NumberOfEventsInput, "{backspace}{backspace}10");
 
     const EventListDOM = AppDOM.querySelector('#event-list');
     const allRenderedEventItems = within(EventListDOM).queryAllByRole('listitem');
