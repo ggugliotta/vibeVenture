@@ -1,22 +1,22 @@
 import puppeteer from 'puppeteer';
 
 describe('show/hide an event details', () => {
-  let browser;
-  let page;
-  beforeAll(async () => {
-    browser = await puppeteer.launch({
-        headless: false,
-        slowMo: 250, // slow down by 250ms,
-        timeout: 0 // removes any puppeteer/browser timeout limitations
-    });
-    page = await browser.newPage();
-    await page.goto('http://localhost:3000/');
-    await page.waitForSelector('.event');
-  });
+  //let browser;
+  //let page;
+  //beforeAll(async () => {
+   // browser = await puppeteer.launch({
+        //headless: false,
+        //slowMo: 250, // slow down by 250ms,
+        //timeout: 0 // removes any puppeteer/browser timeout limitations
+    //});
+    //page = await browser.newPage();
+    //await page.goto('http://localhost:3000/');
+    //await page.waitForSelector('.event');
+  //});
 
-  afterAll(() => {
-    browser.close();
-  });
+ // afterAll(() => {
+   // browser.close();
+  //});
 
   test('An event element is collapsed by default', async () => {
     const eventDetails = await page.$('.event .details');
