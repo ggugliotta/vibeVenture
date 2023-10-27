@@ -1,12 +1,9 @@
 import puppeteer from 'puppeteer';
-import jest from "@testing-library/jest-dom";
-import react from "@testing-library/react"
 
 describe('show/hide an event details', () => {
   let browser;
   let page;
-
-beforeAll(async () => {
+  beforeAll(async () => {
     browser = await puppeteer.launch({
         headless: false,
         slowMo: 250, // slow down by 250ms,
@@ -28,13 +25,13 @@ beforeAll(async () => {
 
 
   test('User can expand an event to see its details', async () => {
-    await page.click('.event .details-btn');
+    await page.click('.event .show-details-btn');
     const eventDetails = await page.$('.event .details')
     expect(eventDetails).toBeDefined();
   });
 
   test('User can collapse an event to hide details', async () => {
-    await page.click('.event .details-btn');
+    await page.click('.event .show-details-btn');
     const eventDetails = await page.$('.event .details');
     expect(eventDetails).toBeNull();
   });
