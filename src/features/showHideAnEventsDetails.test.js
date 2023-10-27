@@ -6,6 +6,7 @@ import userEvent from "@testing-library/user-event";
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 
 defineFeature(feature, test => {
+      //Scenario 1
       test('An event element is collapsed by default.', ({ given, when, then }) => {
         let AppComponent;
         given('that the user is viewing events for a filtered city', () => {
@@ -31,6 +32,7 @@ defineFeature(feature, test => {
         });
     });
 
+    // Scenario 2
     test('User can expand an event to see details.', ({ given, when, then }) => {
         let AppComponent;
         given('that the event element is collapsed by default', async () => {
@@ -46,7 +48,11 @@ defineFeature(feature, test => {
         });
 
         when('a user clicks on the element', async () => {
-            const button = AppComponent.queryAllByText("Show Details Button")[0];
+            const user = userEvent.setup();
+            const eventDOM = AppComponent.container.firstChild;
+
+            expect(details).toBeInTheDocument();
+            const button = eventDOM.queryAllByText("Show Details Button")[0];
             await userEvent.click(button);
         });
 
@@ -57,6 +63,7 @@ defineFeature(feature, test => {
         });
     });
 
+    // Scenario 3
     test('User can collapse an event to hide details.', ({ given, when, then }) => {
         let AppComponent;
         let button;
