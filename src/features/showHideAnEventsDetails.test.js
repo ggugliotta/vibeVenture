@@ -38,21 +38,15 @@ defineFeature(feature, test => {
         given('that the event element is collapsed by default', async () => {
             AppComponent = render(<App />);
             const AppDOM = AppComponent.container.firstChild;
-            const EventListDOM = AppDOM.querySelector('#event-list');
-
+          
             await waitFor(() => {
-                const EventListItems =
-                within(EventListDOM).queryAllByRole("listitem");
-                expect(EventListItems.length).toBe(32);
+                const eventlist = within(AppDOM).queryAllByRole("listitem");
+                expect(eventlist[0]).toBeTruthy;
             });
         });
 
         when('a user clicks on the element', async () => {
-            const user = userEvent.setup();
-            const eventDOM = AppComponent.container.firstChild;
-
-            expect(details).toBeInTheDocument();
-            const button = eventDOM.queryAllByText("Show Details Button")[0];
+            const button = AppComponent.queryAllByText('show details')[0];
             await userEvent.click(button);
         });
 

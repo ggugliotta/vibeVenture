@@ -27,6 +27,7 @@ defineFeature(feature, test => {
     // Scenario 2
     test('User can change the number of events displayed.', ({ given, when, then }) => {
         let AppComponent;
+        let eventList;
         given('that a specific city event results are showing;', async () => {
             AppComponent = render(<App />);
             const AppDOM = AppComponent.container.firstChild;
@@ -37,8 +38,10 @@ defineFeature(feature, test => {
         });
 
         when('a user clicks submit on the search bar to filter for a specific city;', async () => {
-            const button = AppComponent.queryByTestId('numberofEventsInput');
-            await userEvent.type(button, "{backspace}{backspace}10");
+            const AppDOM = AppComponent.container.firstChild;
+            const NumberOfEventsDOM = AppDOM.querySelector(#number-of-events);
+            const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');
+            await userEvent.type(NumberOfEventsInput, "{backspace}{backspace}10");
         });
 
         then('an optional setting will show up below to specify the number of events to display.', () => {
