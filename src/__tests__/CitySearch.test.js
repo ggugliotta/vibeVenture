@@ -9,7 +9,11 @@ import { extractLocations, getEvents } from '../api';
 describe('<CitySearch /> component', () => {
    let CitySearchComponent;
    beforeEach(() => {
-    CitySearchComponent = render(<CitySearch allLocations={[]} />);
+    CitySearchComponent = render(<CitySearch 
+      allLocations={[]} 
+      setCurrentCity={() => {}}
+      setInfoAlert ={() => { }}
+       />);
    });
    
    test('renders text input', () => {
@@ -44,7 +48,7 @@ describe('<CitySearch /> component', () => {
       // Get extractLocations from api.js (function creates new arrary from mockData with only locations) for all events
       const allLocations = extractLocations(allEvents);
       // Rerender CitySearch with all locations available to search
-      CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+      CitySearchComponent.rerender(<CitySearch allLocations={allLocations} setInfoAlert ={() => { }} />);
 
       //user types "Berlin" in city textbox
       const cityTextBox = CitySearchComponent.queryByRole('textbox');
@@ -69,6 +73,7 @@ describe('<CitySearch /> component', () => {
      CitySearchComponent.rerender(<CitySearch 
       allLocations={allLocations} 
       setCurrentCity={() => { }} 
+      setInfoAlert ={() => { }}
       />);
 
      const cityTextBox = CitySearchComponent.queryByRole('textbox');
