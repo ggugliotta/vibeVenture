@@ -1,7 +1,6 @@
 // src/components/CitySearch.js
 
 import { useState, useEffect } from "react";
-import { InfoAlert } from './components/Alert';
 
   //create CitySearch component using allLocations as parameter
 const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
