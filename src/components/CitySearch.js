@@ -1,9 +1,10 @@
 // src/components/CitySearch.js
 
 import { useState, useEffect } from "react";
+import { InfoAlert } from './components/Alert';
 
   //create CitySearch component using allLocations as parameter
-const CitySearch = ({ allLocations, setCurrentCity }) => {
+const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
 
   useEffect(() => {
     setSuggestions(allLocations);
@@ -22,6 +23,14 @@ const handleInputChanged = (event) => {
   }) : [];
   setQuery(value);
   setSuggestions(filteredLocations);
+
+  let infoText;
+  if (filteredLocations.length === 0) {
+    infoText = "We can not find the city you are looking for. Please try another city"
+  } else {
+    infoText = ""
+  }
+    setInfoAlert(infoText);
 };
 
    //Hide the list when an event is selected by the user
@@ -30,6 +39,7 @@ const handleItemClicked = (event) => {
   setQuery(value);
   setShowSuggestions(false); // to hide the list
   setCurrentCity(value);
+  setInfoAlert("");
   };
 
 return (
