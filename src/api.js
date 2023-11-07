@@ -40,6 +40,8 @@ export const getEvents = async () => {
     const response = await fetch(url);
     const result = await response.json();
     if (result) {
+      NProgress.done();
+      localStorage.setItem("lastEvents", JSON.stringify(result.events));
       return result.events;
     } else return null;
   }
@@ -72,11 +74,6 @@ const checkToken = async (accessToken) => {
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
   );
   const result = await response.json();
-  if (result) {
-    NProgress.done();
-    localStorage.setItem("lastEvents", JSON.stringify(results.events));
-    return result.events;
-  } else return null;
 };
 
 const removeQuery = () => {
