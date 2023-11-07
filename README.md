@@ -1,15 +1,15 @@
-# vibeVenture
-event finder
+# VibeVenture
+event finder app
 <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/vibeVenture">
     <img src="public/logo.png" alt="Logo" width="300" height="300">
   </a>
 
-  <h3 align="center">vibeVenture</h3>
+  <h3 align="center">VibeVenture</h3>
 
   <p align="center">
-    A vibe tracker for your local happenings
+    Find your vibe
     <br/>
     <br/>
     <a href="https://github.com/ggugliotta/vibeVenture"><strong>Explore the docs »</strong></a>
