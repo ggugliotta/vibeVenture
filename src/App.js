@@ -40,15 +40,17 @@ useEffect(() => {
 
 return (
     <div className="App">
-      <h1>VibeVenture App</h1>
+      <h1>VibeVenture</h1>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text ={infoAlert}/> : null}
-        {errorAlert.length ? <ErrorAlert text ={errorAlert}/> : null}
-        {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
+        {errorAlert.length ? <WarningAlert text ={warningAlert}/> : null}
+        {warningAlert.length ? <ErrorAlert text={errorAlert}/> : null}
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity = {setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE ={setCurrentNOE} setErrorAlert={setErrorAlert} />
-      <CityEventsChart allLocations={allLocations} events={events} />
+      <div className="charts-container">
+        <CityEventsChart allLocations={allLocations} events={events} />
+      </div>
       <EventList events={events}/>
     </div>
   );
