@@ -1,27 +1,27 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "VibeVenture",
+  "name": "VibeVenture App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logo.png",
       "type": "image/x-icon",
       "sizes": "48x48",
       "purpose": "maskable"
     },
     {
-      "src": "vibeventure logo.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any"
     },
     {
-      "src": "vibeventure logo.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "vibeventure logo.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
