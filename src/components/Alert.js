@@ -9,8 +9,6 @@ class Alert extends Component {
     this.bgColor = null;
   }
 
-  
-
   getStyle = () => {
     return {
       color: this.color,
