@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { extractLocations, getEvents } from "./api";
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 import CityEventsChart from './components/CityEventsChart';
+import EventsGenresChart from './components/EventsGenresChart';
 
 import "./App.css";
 
@@ -49,6 +50,7 @@ return (
       <CitySearch allLocations={allLocations} setCurrentCity = {setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE ={setCurrentNOE} setErrorAlert={setErrorAlert} />
       <div className="charts-container">
+        <EventsGenresChart events={events} />
         <CityEventsChart allLocations={allLocations} events={events} />
       </div>
       <EventList events={events}/>
