@@ -3,25 +3,25 @@
   "name": "VibeVenture App",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "logo_2_48x48.png",
       "type": "image/x-icon",
       "sizes": "48x48",
       "purpose": "maskable"
     },
     {
-      "src": "logo.png",
+      "src": "logo_1_144x144.png",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any"
     },
     {
-      "src": "logo.png",
+      "src": "logo_192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "logo.png",
+      "src": "logo_3_512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
