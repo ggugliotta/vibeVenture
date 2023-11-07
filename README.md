@@ -1,6 +1,6 @@
-<p align="center"
+
 # VibeVenture
-event finder app>
+Event Locator Application 
 
 <br/>
 <p align="center">
