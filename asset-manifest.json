@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/VibeVenture/static/css/main.7303aea2.css",
-    "main.js": "/VibeVenture/static/js/main.fa21b9be.js",
+    "main.js": "/VibeVenture/static/js/main.0ad8ad1f.js",
     "static/js/787.5f08981b.chunk.js": "/VibeVenture/static/js/787.5f08981b.chunk.js",
     "service-worker.js": "/VibeVenture/service-worker.js",
     "index.html": "/VibeVenture/index.html",
     "main.7303aea2.css.map": "/VibeVenture/static/css/main.7303aea2.css.map",
-    "main.fa21b9be.js.map": "/VibeVenture/static/js/main.fa21b9be.js.map",
+    "main.0ad8ad1f.js.map": "/VibeVenture/static/js/main.0ad8ad1f.js.map",
     "787.5f08981b.chunk.js.map": "/VibeVenture/static/js/787.5f08981b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7303aea2.css",
-    "static/js/main.fa21b9be.js"
+    "static/js/main.0ad8ad1f.js"
   ]
 }
