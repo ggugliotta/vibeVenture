@@ -1,0 +1,30 @@
+button {
+    border: none;
+    border-radius: 8px;
+    color: white; 
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold; 
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #1321212a; 
+    color: black;
+    border: none; 
+}
+
+button:hover {
+    background-color: #4681f4;
+    color: white; 
+}
+
+.event {
+    border: 0.5 px; 
+    background-color: none; 
+    margin: 10px;
+    list-style-type: none;
+    list-style: none;
+}
