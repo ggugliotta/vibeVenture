@@ -6,19 +6,17 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
         setCurrentNOE(value);
     
 
-    let infoText;
+    let errorText;
     if (isNaN(value) || value <= 0) {
-        infoText = 'Please enter a number greater than 0';
-        setErrorAlert(infoText)
+        errorText = 'Please enter a number greater than 0';
+        setErrorAlert(errorText);
     } else {
-        infoText = "";
-        setErrorAlert(infoText);
-        setCurrentNOE(value)
-       }
+        setCurrentNOE(value);
     }
+};
 
     return (
-        <div id="number-of-events">
+        <div data-test-id="number-of-events">
             <label htmlFor="number-of-events-input">Number of Events: </label>
             <input
                 type="text"

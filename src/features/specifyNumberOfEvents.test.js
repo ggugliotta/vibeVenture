@@ -39,7 +39,7 @@ defineFeature(feature, test => {
 
         when('a user clicks submit on the search bar to filter for a specific city;', async () => {
             const AppDOM = AppComponent.container.firstChild;
-            const NumberOfEventsDOM = AppDOM.querySelector(#number-of-events);
+            const NumberOfEventsDOM = AppDOM.querySelector("#number-of-events");
             const NumberOfEventsInput = within(NumberOfEventsDOM).queryByRole('textbox');
             await userEvent.type(NumberOfEventsInput, "{backspace}{backspace}10");
         });

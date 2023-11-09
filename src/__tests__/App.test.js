@@ -20,7 +20,9 @@ describe('<App /> component', () => {
   });
 
   test('render number of events', () => {
-    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
+    // FIX Line 23 to pass test 
+    // received has value null number of events is not rendered 
+    expect(AppDOM.querySelector('number-of-events')).toBeInTheDocument();
   });
 });
 

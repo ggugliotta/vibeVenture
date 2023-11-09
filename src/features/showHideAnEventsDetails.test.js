@@ -53,6 +53,8 @@ defineFeature(feature, test => {
         then('the user should be able to open the event element to show more details.', () => {
             const EventDOM = AppComponent.container.firstChild;
             const details = EventDOM.querySelector('.details');
+            // FIX LINE 56 TO PASS TEST
+            // received has value null, details not rendered 
             expect(details).toBeInTheDocument();
         });
     });

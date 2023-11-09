@@ -21,6 +21,7 @@ describe("<NumberOfEvents /> component", () => {
     expect(input).toHaveValue("32");
   });
 
+  //Test failing due to line 12 of NumberofEvents.js not being a function 
   test("updates textbox correctly when user types in NumberOfEvents textbox", async () => {
     //User Interaction Setup
     const user = userEvent.setup();
