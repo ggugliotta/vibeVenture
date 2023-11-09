@@ -27,6 +27,6 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
             />
         </div>
     );
-}
+};
 
 export default NumberOfEvents;

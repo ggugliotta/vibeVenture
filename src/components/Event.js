@@ -22,7 +22,6 @@ const Event = ({ event }) => {
         <div className="details">
           <h4>Event Details</h4>
           <p>About: {event.description};</p>
-          <p>Add to Calendar:{event.htmlLink} </p>
         </div>
       ) : null}
    
@@ -31,3 +30,7 @@ const Event = ({ event }) => {
 };
 
 export default Event;
+ //<p>
+           //<a href="https://calendar.google.com/calendar/r/eventedit?text=Test&dates=20210914T170000Z/20210914T180000Z&details=Test&location=Test&sf=true&output=xml"
+           // target="_blank">Add to your calendar</a>
+          //</p>

@@ -3,7 +3,7 @@
 import { render, within } from '@testing-library/react';
 import { userEvent } from "@testing-library/user-event";
 import { getEvents } from "../api";
-import App from '../App';
+import  App  from '../App';
 
 describe('<App /> component', () => {
   let AppDOM;
@@ -20,9 +20,7 @@ describe('<App /> component', () => {
   });
 
   test('render number of events', () => {
-    // FIX Line 23 to pass test 
-    // received has value null number of events is not rendered 
-    expect(AppDOM.querySelector('number-of-events')).toBeInTheDocument();
+    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
   });
 });
 
