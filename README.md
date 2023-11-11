@@ -150,11 +150,24 @@ VibeVenture was written in React and Javascript for the front-end component and 
 
 ## Built With
 
+Methodology
 * [Test driven development (TDD)](https://www.browserstack.com/guide/what-is-test-driven-development)
-
+  
+Libraries
 * [React ](react.com)
-* [CRA](https://create-react-app.dev/)
+* [React Bootstrap](react-bootstrap.com)
+* [Recharts](https://recharts.org/en-US/)
+
+Testing Resources
+* [Atatus](https://www.atatus.com/)
+* [Jest](https://jestjs.io/)
+* [Jest-Cucumber](https://www.npmjs.com/package/jest-cucumber)
+* [Puppeteer](https://pptr.dev/)
+
+APIs
 * [Google Calendar API](https://developers.google.com/calendar/api/quickstart/js)
+
+Deployment 
 * [AWS lambda](https://aws.amazon.com/lambda/)
 * [Github Pages](https://pages.github.com/)
 
@@ -164,10 +177,35 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* npm
-
 ```sh
-npm install npm@latest -g
+"start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --detectOpenHandles",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  
+  "eslintConfig": 
+    "extends": 
+      "react-app",
+      "react-app/jest"
+  
+  "browserslist": 
+    "production": 
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    
+    "development": 
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    
+  
+  "devDependencies": 
+    "gh-pages": "^6.0.0",
+    "jest-cucumber": "^3.0.1",
+    "puppeteer": "^18.1.0"
 ```
 
 ### Installation
@@ -182,12 +220,32 @@ git clone https://github.com/ggugliotta_/vibeVenture.git
 
 ```sh
 npm install
+"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+"@testing-library/jest-dom": "^5.17.0",
+"@testing-library/react": "^13.4.0",
+"@testing-library/user-event": "^14.5.1",
+ "atatus-spa": "^4.6.0",
+ "bootstrap": "^5.3.2",
+ "nprogress": "^0.2.0",
+ "react": "^18.2.0",
+ "react-bootstrap": "^2.9.1",
+ "react-dom": "^18.2.0",
+ "react-scripts": "^5.0.1",
+ "recharts": "^2.9.3",
+ "web-vitals": "^2.1.4",
+ "workbox-background-sync": "^6.6.0",
+ "workbox-broadcast-update": "^6.6.0",
+ "workbox-cacheable-response": "^6.6.0",
+ "workbox-core": "^6.6.0",
+ "workbox-expiration": "^6.6.0",
+ "workbox-google-analytics": "^6.6.0",
+ "workbox-navigation-preload": "^6.6.0",
+ "workbox-precaching": "^6.6.0",
+ "workbox-range-requests": "^6.6.0",
+  "workbox-routing": "^6.6.0",
+ "workbox-strategies": "^6.6.0",
+ "workbox-streams": "^6.6.0"
 ```
-
-
-## Usage
-
-placeholder for examples of usage 
 
 ## Roadmap
 
