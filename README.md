@@ -40,7 +40,7 @@ Event Locator Application
 
 ## About The Project
 
-![VibeVenture PWA Screen Shot](vibeventure_screenshot.png)
+![VibeVenture PWA Screen Shot](VibeVenture_Screenshot.png)
 
 
 This project was built to locate events happening around the USA. There is a filter option to find vibes near you. This app is a progressive web app with the ability to work offline and a serverless backend developed using a TDD technique. Users of this app will be able to access it whenever they want to view upcoming events for a specific city.
