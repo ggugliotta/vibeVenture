@@ -1,6 +1,6 @@
 
 # VibeVenture
-Event Locator Application 
+Event Locator Progressive Web Application 
 
 <br/>
 <p align="center">
