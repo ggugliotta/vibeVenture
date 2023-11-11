@@ -177,7 +177,8 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* npm
+```sh
+
 "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --detectOpenHandles",
@@ -206,9 +207,6 @@ To get a local copy up and running follow these simple steps.
     "gh-pages": "^6.0.0",
     "jest-cucumber": "^3.0.1",
     "puppeteer": "^18.1.0"
-  
-
-```sh
 
 ```
 
