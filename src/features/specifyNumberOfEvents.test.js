@@ -9,6 +9,7 @@ defineFeature(feature, test => {
     // Scenario 1
      test('When a user hasn\'t specified a number, 32 events are shown by default.', ({ given, when, then }) => {
         let AppComponent;
+        let eventList;
         given('that the main page is open;', () => {
             AppComponent = render(<App />);
         });
