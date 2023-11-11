@@ -46,7 +46,7 @@ defineFeature(feature, test => {
         });
 
         when('a user clicks on the element', async () => {
-            const button = AppComponent.queryAllByText('show details')[0];
+            const button = AppComponent.queryAllByText('Show Details')[0];
             await userEvent.click(button);
         });
 
