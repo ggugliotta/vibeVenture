@@ -247,11 +247,6 @@ npm install
  "workbox-streams": "^6.6.0"
 ```
 
-
-## Usage
-
-placeholder for examples of usage 
-
 ## Roadmap
 
 See the [open issues](https://github.com/ggugliotta/vibeVenture/issues) for a list of proposed features (and known issues).
