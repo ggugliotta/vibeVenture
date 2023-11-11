@@ -44,8 +44,8 @@ return (
       <h1>VibeVenture</h1>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text ={infoAlert}/> : null}
-        {errorAlert.length ? <WarningAlert text ={warningAlert}/> : null}
         {warningAlert.length ? <ErrorAlert text={errorAlert}/> : null}
+        {errorAlert.length ? <WarningAlert text ={warningAlert}/> : null}
       </div>
       <CitySearch allLocations={allLocations} setCurrentCity = {setCurrentCity} setInfoAlert={setInfoAlert}/>
       <NumberOfEvents setCurrentNOE ={setCurrentNOE} setErrorAlert={setErrorAlert} />
