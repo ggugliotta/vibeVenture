@@ -3,14 +3,15 @@ import React, { useState } from "react";
 const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     const handleInputChanged = (event)  => {
         const value = event.target.value;
-        setCurrentNOE(value);
     
-
-    let errorText;
-    if (isNaN(value) || value <= 0) {
+    if (isNaN(value)) {
         errorText = 'Please enter a number greater than 0';
-        setErrorAlert(errorText);
+    } else if ( value > 50 ) {
+        setErrorAlert('maximum value is 50');
+    } else if (value <= 0) {
+        setErrorAlert('minimum value is 1');
     } else {
+        setErrorAlert('');
         setCurrentNOE(value);
     }
 };
