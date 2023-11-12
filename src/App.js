@@ -31,10 +31,11 @@ const fetchData = async () => {
 
 useEffect(() => {
   if (navigator.onLine) {
+    setWarningAlert("");
     // set the warning alert message to an empty string ""
   } else {
     // set the warning alert message to a non-empty string
-  }
+  } setWarningAlert("You are currently offline. The data shown may not be up to date.");
   fetchData();
   }, [ currentCity, currentNOE ]);
 
