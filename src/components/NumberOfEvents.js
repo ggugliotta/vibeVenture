@@ -5,7 +5,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
         const value = event.target.value;
     
     if (isNaN(value)) {
-        errorText = 'Please enter a number greater than 0';
+        setErrorAlert = 'Please enter a number greater than 0';
     } else if ( value > 50 ) {
         setErrorAlert('maximum value is 50');
     } else if (value <= 0) {
