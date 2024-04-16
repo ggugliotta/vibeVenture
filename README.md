@@ -43,7 +43,7 @@ Event Locator Progressive Web Application
 ![VibeVenture PWA Screen Shot](VibeVenture_ScreenShot.png)
 
 
-This project was built to locate events happening around the USA. There is a filter option to find vibes near you. This app is a progressive web app with the ability to work offline and a serverless backend developed using a TDD technique. Users of this app will be able to access it whenever they want to view upcoming events for a specific city.
+This project was built to locate events happening around the world. There is a filter option to find vibes near you. This app is a progressive web app with the ability to work offline and a serverless backend developed using a TDD technique. Users of this app will be able to access it whenever they want to view upcoming events for a specific city.
 
 ![VibeVenture Serverless Architectural Diagram Image](diagram.png)
 
