@@ -4,7 +4,7 @@ Event Locator Progressive Web Application
 
 <br/>
 <p align="center">
-  <a href="https://github.com/ggugliotta/vibeVenture">
+  <a href="https://ggugliotta.github.io/VibeVenture/">
     <img src="public/logo.png" alt="Logo" width="300" height="300">
   </a>
 
@@ -15,7 +15,7 @@ Event Locator Progressive Web Application
     <a href="https://github.com/ggugliotta/vibeVenture"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/ggugliotta/vibeVenture">View Demo</a>
+    <a href="https://ggugliotta.github.io/VibeVenture/">View Website</a>
     .
     <a href="https://github.com/ggugliotta/vibeVenture/issues">Report Bug</a>
     .
